@@ -1,0 +1,25 @@
+<div class="context">
+    <!--{{#.length}}-->
+    <div class="customer-context">
+        <div class="metadata-title">{{0.customerName}}</div>
+        <div class="metadata-wldId"><a target="_blank" href="http://coportal.westlan.com/index.jsp?page=customer_details&amp;wld_id={{0.wldId}}&amp;profile_id=1">Wld ID: {{0.wldId}}</a></div>
+    </div>
+    <div class="activity-context">
+        {{#.}}
+        <div class="activity">
+            <div class="activity-status" style="{{status}}">
+                <div class="activity-tab">
+                    <div class="activity-info">
+                        {{activity}} - <span>{{currentStaffName}}</span>
+                    </div>
+                    <div class="activity-metadata">
+                        <div class="activity-workflow"><a class="activity-metadata-link" target="_blank" href="https://flws-qa.int.thomsonreuters.com/#/tasks/{{bpmActivityTransactionId}}/workflow">Workflow</a></div>
+                        <div class="activity-notes"><a class="activity-metadata-link" target="_blank" href="https://flws-qa.int.thomsonreuters.com/#/tasks/{{bpmActivityTransactionId}}/notes" >Notes</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/.}}
+    </div>
+    <!--{{/.length}}-->
+</div>

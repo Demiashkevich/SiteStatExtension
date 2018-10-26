@@ -1,0 +1,18 @@
+ {
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	"name": "Hello Extensions",
+	"description" : "Base Level Extension",
+	"version": "1.0",
+	"manifest_version": 2,
+	"background": {
+	 "page": "src/bg/background.html",
+	 "persistent": true
+	},
+	"browser_action": {
+		"default_popup": "src/page_action/page_action.html",
+		"default_icon": "icons/default.png"
+	},
+	"permissions": [
+		"tabs"
+	]
+  }
